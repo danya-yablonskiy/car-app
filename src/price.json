@@ -1,0 +1,19 @@
+[
+  { "id": "id-1", "carPrice": 30 },
+  { "id": "id-2", "carPrice": 40 },
+  { "id": "id-3", "carPrice": 50 },
+  { "id": "id-4", "carPrice": 60 },
+  { "id": "id-5", "carPrice": 70 },
+  { "id": "id-6", "carPrice": 80 },
+  { "id": "id-7", "carPrice": 90 },
+  { "id": "id-8", "carPrice": 100 },
+  { "id": "id-9", "carPrice": 120 },
+  { "id": "id-10", "carPrice": 140 },
+  { "id": "id-11", "carPrice": 160 },
+  { "id": "id-12", "carPrice": 180 },
+  { "id": "id-13", "carPrice": 200 },
+  { "id": "id-14", "carPrice": 240 },
+  { "id": "id-15", "carPrice": 260 },
+  { "id": "id-16", "carPrice": 300 },
+  { "id": "id-17", "carPrice": 500 }
+]
