@@ -86,7 +86,7 @@ export const Modal = ({ closeModal, carItem }) => {
                   <S.RentalItem key={item}>
                     {[...rest].reverse().join(' ')}&nbsp;
                     <S.RentalItemHighlight>{last}</S.RentalItemHighlight>
-                  </S.RentalItem>
+                  </S.RentalItem> 
                 );
               }
               return <S.RentalItem key={item}>{item}</S.RentalItem>;

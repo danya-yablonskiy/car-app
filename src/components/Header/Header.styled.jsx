@@ -8,11 +8,12 @@ export const List = styled.ul`
 
 export const ListItem = styled.li`
   margin-left: 40px;
- 
+
 `;
 export const StyledLink = styled(NavLink)`
   text-decoration: none;
- 
+ font-weight: 500;
+ font-size: 20px;
   color: inherit;
   &.active {
     color: #3470ff;
