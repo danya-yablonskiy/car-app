@@ -25,7 +25,7 @@
   font-style: normal;
   font-weight: 600;
   font-display: swap;
-  src: url(../assets/fonts/Manrope-SemiBold.ttf);
+  src: url(../assets/fonts/Manrope-Semibold.ttf);
   unicode-range: U+0100-02AF, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF,
     U+2113, U+2C60-2C7F, U+A720-A7FF;
 }
@@ -42,11 +42,15 @@
 
 body {
   margin: 0;
-  font-weight: 400;
-  font-family: 'Manrope', 'Montserrat', sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Manrope', 'Segoe UI',
+    'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
+    'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #ffffff;
+  font-size: 14px;
+  color: #121417;
+  font-weight: 400;
+  line-height: 1.43;
 }
 
 code {

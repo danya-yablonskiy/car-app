@@ -77,7 +77,7 @@ const AppBar = () => {
           </Label>
 
           <Label>
-            <span>Car mileage / km</span>
+            Car mileage / km
             <CombinedInputContainer>
               <InputFrom
                 prefix="From "
