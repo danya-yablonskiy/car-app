@@ -34,19 +34,21 @@ export const CarsList = ({ cars, favoritesItems }) => {
                 <S.ModelAndPriceText>{item.rentalPrice}</S.ModelAndPriceText>
               </S.ModelAndPriceWrapper>
 
-              <S.CarInfoList>
-                {[
-                  item.address.split(',')[1],
-                  item.address.split(',')[2],
-                  item.rentalCompany,
-                  item.type,
-                  item.model,
-                  item.id,
-                  item.functionalities[0],
-                ].map((info, index, arr) => (
-                  <S.CarInfoListItem key={index}>{info}</S.CarInfoListItem>
-                ))}
-              </S.CarInfoList>
+              <S.CarInfoListFirst>
+                <S.CarInfoListItem>
+                  {item.address.split(',')[1]}
+                </S.CarInfoListItem>
+                <S.CarInfoListItem>
+                  {item.address.split(',')[2]}
+                </S.CarInfoListItem>
+                <S.CarInfoListItem>{item.rentalCompany}</S.CarInfoListItem>
+              </S.CarInfoListFirst>
+              <S.CarInfoListSecond>
+                <S.CarInfoListItem>{item.type}</S.CarInfoListItem>
+                <S.CarInfoListItem>{item.model}</S.CarInfoListItem>
+                <S.CarInfoListItem>{item.id}</S.CarInfoListItem>
+                <S.CarInfoListItem>{item.functionalities[0]}</S.CarInfoListItem>
+              </S.CarInfoListSecond>
 
               <LearnMoreBtn carItem={item} />
             </S.CarItem>

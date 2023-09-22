@@ -28,18 +28,33 @@ export const ImgCar = styled.img`
     lightgray 50% / cover no-repeat;
 `;
 
-export const CarInfoList = styled.ul`
+export const CarInfoListFirst = styled.ul`
   margin-top: 8px;
   font-size: 12px;
+  line-height: 18px;
   color: rgba(18, 20, 23, 0.5);
-  display: inline-flex;
+  display: flex;
   flex-wrap: wrap;
-  gap: 6px;
+ 
+`;
+
+export const CarInfoListSecond = styled.ul`
+  margin-top: 4px;
+  font-size: 12px;
+  line-height: 18px;
+  color: rgba(18, 20, 23, 0.5);
+  display: flex;
+  flex-wrap: wrap;
 `;
 
 export const CarInfoListItem = styled.li`
-  word-break: break-word;
-  display: inline;
+  &:not(:last-child) {
+    padding-right: 6px;
+    border-right: 1px solid rgba(18, 20, 23, 0.1);
+  }
+  &:not(:first-child) {
+    padding-left: 6px;
+  }
 `;
 
 export const ModelSpan = styled.span`
@@ -60,6 +75,7 @@ export const ModelAndPriceWrapper = styled.div`
   display: flex;
   justify-content: space-between;
   margin-top: 14px;
+  font-weight: 500;
 `;
 
 export const ModelAndPriceText = styled.p`
