@@ -13,14 +13,9 @@ export const Overlay = styled.div`
 `;
 
 export const ModalBody = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: start;
-  justify-content: space-between;
   position: relative;
   background-color: #fff;
   width: 541px;
-  height: 752px;
   border-radius: 24px;
   padding: 40px;
 `;
@@ -28,7 +23,9 @@ export const ModalBody = styled.div`
 export const ModalImg = styled.img`
   border-radius: 14px;
   width: 100%;
-  height: 350px;
+  max-height: 248px;
+  object-fit: cover;
+  object-position: center center;
 `;
 
 export const CloseModalBtn = styled.button`
@@ -44,7 +41,7 @@ export const CloseModalBtn = styled.button`
 export const CloseModalSvg = styled(closeModalSvgStyled)``;
 
 export const ModelAndPriceText = styled.p`
-  margin-top: 14px;
+  margin-top: 10px;
   color: #121417;
   line-height: 1.3333;
 
@@ -55,17 +52,36 @@ export const ModelSpan = styled.span`
   color: #3470ff;
 `;
 
-export const CarInfo = styled.p`
-  font-size: 12px;
-  margin-top: 8px;
+export const CarInfoModalListFirst = styled.ul`
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 4px;
   color: rgba(18, 20, 23, 0.5);
-  width: 277px;
-  margin-bottom: 14px;
+`;
+
+export const CarInfoModalListSecond = styled.ul`
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 2px;
+  color: rgba(18, 20, 23, 0.5);
+  line-height: 1.5;
+  margin-bottom: 10px;
+`;
+
+export const CarInfoModalListItem = styled.li`
+  line-height: 1.5;
+  &:not(:last-child) {
+    padding-right: 6px;
+    border-right: 1px solid rgba(18, 20, 23, 0.1);
+  }
+  &:not(:first-child) {
+    padding-left: 6px;
+  }
 `;
 
 export const RentalCarLink = styled.a`
   display: inline-block;
-  margin-top: 24px;
+  margin-top: 10px;
   padding: 12px 50px;
   border-radius: 12px;
   background-color: #3470ff;
@@ -81,14 +97,16 @@ export const CarDescription = styled.span`
 `;
 
 export const FufunctionalitiesTitle = styled.p`
-  font-size: 14px;
-  margin-top: 8px;
-  line-height: 20px;
+  margin-top: 10px;
+  line-height: 1.42;
+  font-weight: 500px;
+  margin-bottom: 8px;
 `;
 
 export const RentalTitle = styled.p`
-  font-size: 14px;
-  line-height: 20px;
+  line-height: 1.42;
+  font-weight: 500;
+  margin-bottom: 4px;
 `;
 
 export const RentalList = styled.ul`
@@ -104,7 +122,7 @@ export const RentalList = styled.ul`
 `;
 export const RentalItem = styled.li`
   &:not(:last-child) {
-    margin-right: 8px;
+    margin-right: 4px;
   }
   display: inline-flex;
   border-radius: 35px;
@@ -120,18 +138,27 @@ export const RentalItemHighlight = styled.span`
   line-height: 18px;
 `;
 
-
-export const CarAandD = styled.ul`
+export const CarAandDListFirst = styled.ul`
   display: flex;
   flex-wrap: wrap;
-`
+  margin-bottom: 2px;
+`;
+export const CarAandDListSecond = styled.ul`
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 14px;
+`;
+
 export const CarAandDItem = styled.li`
   word-break: break-word;
-  font-size: 12px;
   color: rgba(18, 20, 23, 0.5);
-  font-weight: 400;
-  line-height: 18px;
-  &:not(:first-child){
-    padding-left: 6px
+  line-height: 1.5;
+
+  &:not(:first-child) {
+    padding-left: 6px;
+  }
+  &:not(:last-child) {
+    padding-right: 6px;
+    border-right: 1px solid rgba(18, 20, 23, 0.1);
   }
 `;

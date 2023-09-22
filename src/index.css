@@ -1,5 +1,9 @@
 @import-normalize; /* bring in normalize.css styles */
 
+* {
+  box-sizing: border-box;
+}
+
 @font-face {
   font-family: 'Manrope';
   font-style: normal;

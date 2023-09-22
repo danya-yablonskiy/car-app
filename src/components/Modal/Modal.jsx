@@ -29,27 +29,52 @@ export const Modal = ({ closeModal, carItem }) => {
             {carItem.make} <S.ModelSpan>{carItem.model}</S.ModelSpan>,{' '}
             {carItem.year}
           </S.ModelAndPriceText>
-          <S.CarInfo>
-            {carItem.address.split(',')[1]} <span>|</span>{' '}
-            {carItem.address.split(',')[2]} <span>|</span> Id:{carItem.id}{' '}
-            <span>|</span> Year: {carItem.year} | Type: {carItem.type} Fuel
-            consumption: {carItem.fuelConsumption} | Engine size:{' '}
-            {carItem.engineSize}
-          </S.CarInfo>
+
+          <S.CarInfoModalListFirst>
+            <S.CarInfoModalListItem>
+              {carItem.address.split(',')[1]}
+            </S.CarInfoModalListItem>
+            <S.CarInfoModalListItem>
+              {carItem.address.split(',')[2]}
+            </S.CarInfoModalListItem>
+            <S.CarInfoModalListItem>
+              Id:
+              {carItem.id}
+            </S.CarInfoModalListItem>
+            <S.CarInfoModalListItem>
+              Year: {carItem.year}
+            </S.CarInfoModalListItem>
+            <S.CarInfoModalListItem>
+              Type: {carItem.type}
+            </S.CarInfoModalListItem>
+          </S.CarInfoModalListFirst>
+
+          <S.CarInfoModalListSecond>
+            <S.CarInfoModalListItem>
+              Fuel consumption: {carItem.fuelConsumption}
+            </S.CarInfoModalListItem>
+            <S.CarInfoModalListItem>
+              Engine size: {carItem.engineSize}
+            </S.CarInfoModalListItem>
+          </S.CarInfoModalListSecond>
+
           <S.CarDescription>{carItem.description}</S.CarDescription>
           <S.FufunctionalitiesTitle>
             Accessories and functionalities:
           </S.FufunctionalitiesTitle>
-          {/* <S.CarInfo>
-            {carItem.address.split(',')[1]} <span>|</span>{' '}
-            {carItem.address.split(',')[2]} <span>|</span> Id:{carItem.id}{' '}
-            <span>|</span> Year: {carItem.year} | Type: {carItem.type} Fuel
-            consumption: {carItem.fuelConsumption} | Engine size:{' '}
-            {carItem.engineSize}
-          </S.CarInfo> */}
-          <S.CarAandD>
-            {[...carItem.accessories, ...carItem.functionalities].map(item => <S.CarAandDItem key={item}>{item }</S.CarAandDItem>)}
-          </S.CarAandD>
+
+          <S.CarAandDListFirst>
+            {[...carItem.accessories].map(item => (
+              <S.CarAandDItem key={item}>{item}</S.CarAandDItem>
+            ))}
+          </S.CarAandDListFirst>
+
+          <S.CarAandDListSecond>
+            {[...carItem.functionalities].map(item => (
+              <S.CarAandDItem key={item}>{item}</S.CarAandDItem>
+            ))}
+          </S.CarAandDListSecond>
+
           <S.RentalTitle>Rental Conditions:</S.RentalTitle>
           <S.RentalList>
             {carItem.rentalConditions.split('\n').map((item, index, arr) => {
